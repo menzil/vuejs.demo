@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>vue demo</title>
+		<script type="text/javascript" src="./vue.js">
+
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- v-show :  通过css来隐藏 -->
+			<div v-if="showMessage" v-bind:title="title">
+				{{message}}
+			</div>
+			<input v-model="message">
+			<button v-on:click="logMessage">{{button}}</button>
+
+			<ol>
+				<li v-for="color in colors">{{color.content}}</li>
+			</ol>
+
+			<ul>
+				<color v-for="color in colors" v-bind:color="color"></color>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="./index.js">
+
+		</script>
+	</body>
+</html>
